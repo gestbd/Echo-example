@@ -1,0 +1,11 @@
+version: "3.7"
+services: 
+   echo-server:
+    image: gestbd/server
+    expose:
+     - "2000"
+   echo-client:
+    image: gestbd/client
+    links:
+     - echo-server:talkto
+
